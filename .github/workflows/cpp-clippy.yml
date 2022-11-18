@@ -25,11 +25,19 @@ jobs:
     - name: Build
       run: |
           mkdir build && cd build
+          mkdir src && cd src
+          mkdir tool && cd tool
+          touch a
+          chmod +x a
+          
           # cmake ..
           # cmake --build .
           pwd
-          export PATH="$PWD/src/tool:$PATH"
+          echo $PWD
+          # export PATH="$PWD/src/tool:$PATH"
+          export PATH="$PWD:$PATH"
           echo $PATH
+          a
           
     - name: Test
       run: |
