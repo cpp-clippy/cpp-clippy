@@ -22,9 +22,16 @@ jobs:
         sudo apt-get update
         sudo pip install lit
 
-    - name: Build + Test
+    - name: Build
       run: |
           mkdir build && cd build
           cmake ..
           cmake --build .
-          lit -v test/
+          
+    - name: Test
+      run: |
+          pwd
+          ls -alt
+          ls -alt src/*
+          ls -alt src/tool/*
+          src/tool/cpp-clippy
