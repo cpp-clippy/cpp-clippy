@@ -15,34 +15,21 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        # sudo apt-get remove -y clang-13
-        # wget https://apt.llvm.org/llvm.sh
-        # chmod +x llvm.sh
-        # sudo ./llvm.sh 15 all
-        # sudo apt-get update
-        # sudo pip install lit
+        sudo apt-get remove -y clang-13
+        wget https://apt.llvm.org/llvm.sh
+        chmod +x llvm.sh
+        sudo ./llvm.sh 15 all
+        sudo apt-get update
+        sudo pip install lit
 
     - name: Build
       run: |
           mkdir build && cd build
-          mkdir src && cd src
-          mkdir tool && cd tool
-          touch a
-          chmod +x a
-          
-          cd ../..
-          
-          # cmake ..
-          # cmake --build .
-          pwd
-          echo $PWD
-          # export PATH="$PWD/src/tool:$PATH"
-          export PATH="$PWD/src/tool:$PATH"
-          echo $PATH
-          a
+          cmake ..
+          cmake --build .
           
     - name: Test
       run: |
-          echo $PATH
-          # cd build
-          # lit -v test/
+          cd build
+          export PATH="$PWD/src/tool:$PATH"
+          lit -v test/
