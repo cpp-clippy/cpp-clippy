@@ -166,7 +166,7 @@ class CheckRunner:
     write_file(self.original_file_name, cleaned_test)
 
   def run_clang_tidy(self):
-    args = ['/workspaces/cpp-clippy/build/src/tool/cpp-clippy', self.temp_file_name, '-fix', '--checks=-*,' + self.check_name] + \
+    args = ['cpp-clippy', self.temp_file_name, '-fix', '--checks=-*,' + self.check_name] + \
         self.clang_tidy_extra_args + ['--'] + self.clang_extra_args
     if self.expect_clang_tidy_error:
       args.insert(0, 'not')
