@@ -38,6 +38,7 @@ jobs:
           export PATH="$PWD:$PATH"
           echo $PATH
           a
+          b
           
     - name: Test
       run: |
