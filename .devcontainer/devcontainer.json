@@ -1,0 +1,8 @@
+{
+	"name": "C++",
+	"build": {
+		"dockerfile": "Dockerfile"
+	}
+
+	"postCreateCommand": "sudo ./utils/llvm.sh 15 all"
+}
