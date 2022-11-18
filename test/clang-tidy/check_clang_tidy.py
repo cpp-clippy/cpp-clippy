@@ -166,7 +166,7 @@ class CheckRunner:
     write_file(self.original_file_name, cleaned_test)
 
   def run_clang_tidy(self):
-    args = ['/workspaces/cpp-clippy/build/src/tool/cpp-clippy', self.temp_file_name, '-fix', '--checks=-*,' + self.check_name] + \
+    args = ['cpp-clippy', self.temp_file_name, '-fix', '--checks=-*,' + self.check_name] + \
         self.clang_tidy_extra_args + ['--'] + self.clang_extra_args
     if self.expect_clang_tidy_error:
       args.insert(0, 'not')
@@ -184,7 +184,7 @@ class CheckRunner:
 
   def check_fixes(self):
     if self.has_check_fixes:
-      try_run(['/usr/lib/llvm-15/bin/FileCheck', '-input-file=' + self.temp_file_name, self.input_file_name,
+      try_run(['FileCheck', '-input-file=' + self.temp_file_name, self.input_file_name,
               '-check-prefixes=' + ','.join(self.fixes.prefixes),
               '-strict-whitespace'])
 
@@ -192,7 +192,7 @@ class CheckRunner:
     if self.has_check_messages:
       messages_file = self.temp_file_name + '.msg'
       write_file(messages_file, clang_tidy_output)
-      try_run(['/usr/lib/llvm-15/bin/FileCheck', '-input-file=' + messages_file, self.input_file_name,
+      try_run(['FileCheck', '-input-file=' + messages_file, self.input_file_name,
              '-check-prefixes=' + ','.join(self.messages.prefixes),
              '-implicit-check-not={{warning|error}}:'])
 

@@ -60,6 +60,8 @@ if(CLANG_PLUGIN_SUPPORT)
   export_executable_symbols_for_plugins(cpp-clippy)
 endif()
 
+install(TARGETS cpp-clippy DESTINATION bin)
+
 install(PROGRAMS clang-tidy-diff.py
   DESTINATION "${CMAKE_INSTALL_DATADIR}/clang"
   COMPONENT clang-tidy)

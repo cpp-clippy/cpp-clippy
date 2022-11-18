@@ -4,5 +4,5 @@
 		"dockerfile": "Dockerfile"
 	}
 
-	"postCreateCommand": "sudo ./utils/llvm.sh 15 all"
+	"postCreateCommand": "sudo ./utils/llvm.sh 15 all; echo 'export PATH=\"/workspaces/cpp-clippy/build/src/tool:$PATH\"' >> ~/.bashrc"
 }

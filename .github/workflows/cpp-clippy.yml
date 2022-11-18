@@ -5,10 +5,60 @@ on:
   pull_request:
 
 jobs:
-  Ubuntu-22.04:
+  Ubuntu_22_04:
     runs-on: ubuntu-22.04
     steps:
 
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get remove -y clang-13
+        wget https://apt.llvm.org/llvm.sh
+        chmod +x llvm.sh
+        sudo ./llvm.sh 15 all
+        sudo apt-get update
+        sudo pip install lit
+
+    - name: Build
+      run: |
+          mkdir build && cd build
+          cmake ..
+          cmake --build .
+          
+    - name: Test
+      run: |
+          cd build
+          export PATH="$PWD/src/tool:$PATH"
+          lit -v test/
+          
+  Ubuntu_20_04:
+    runs-on: ubuntu-20.04
+    steps:
+
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get remove -y clang-11
+        wget https://apt.llvm.org/llvm.sh
+        chmod +x llvm.sh
+        sudo ./llvm.sh 15 all
+        sudo apt-get update
+        sudo pip install lit
+
+    - name: Build
+      run: |
+          mkdir build && cd build
+          cmake ..
+          cmake --build .
+          
+    - name: Test
+      run: |
+          cd build
+          export PATH="$PWD/src/tool:$PATH"
+          lit -v test/
