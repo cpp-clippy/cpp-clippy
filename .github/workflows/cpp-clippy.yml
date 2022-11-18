@@ -30,15 +30,16 @@ jobs:
           touch a
           chmod +x a
           
+          cd ../..
+          
           # cmake ..
           # cmake --build .
           pwd
           echo $PWD
           # export PATH="$PWD/src/tool:$PATH"
-          export PATH="$PWD:$PATH"
+          export PATH="$PWD/src/tool:$PATH"
           echo $PATH
           a
-          b
           
     - name: Test
       run: |
