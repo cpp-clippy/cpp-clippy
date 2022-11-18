@@ -5,8 +5,8 @@ on:
   pull_request:
 
 jobs:
-  Ubuntu_Latest:
-    runs-on: ubuntu-latest
+  Ubuntu_22_04:
+    runs-on: ubuntu-22.04
     steps:
 
     - uses: actions/checkout@v3
