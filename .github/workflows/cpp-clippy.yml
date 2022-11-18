@@ -43,5 +43,6 @@ jobs:
           
     - name: Test
       run: |
+          echo $PATH
           # cd build
           # lit -v test/
