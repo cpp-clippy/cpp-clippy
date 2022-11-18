@@ -31,8 +31,4 @@ jobs:
     - name: Test
       run: |
           cd build
-          pwd
-          ls -alt
-          ls -alt src/*
-          ls -alt src/tool/*
-          src/tool/cpp-clippy
+          lit -v test/
