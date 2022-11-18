@@ -30,6 +30,7 @@ jobs:
           
     - name: Test
       run: |
+          cd build
           pwd
           ls -alt
           ls -alt src/*
