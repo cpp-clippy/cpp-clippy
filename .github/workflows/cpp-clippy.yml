@@ -22,8 +22,9 @@ jobs:
         sudo apt-get update
         sudo pip install lit
 
-    - name: Build
+    - name: Build + Test
       run: |
           mkdir build && cd build
           cmake ..
           cmake --build .
+          lit -v test/
