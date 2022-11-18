@@ -27,9 +27,9 @@ jobs:
           mkdir build && cd build
           cmake ..
           cmake --build .
+          export PATH="$PWD/src/tool:$PATH"
           
     - name: Test
       run: |
           cd build
-          pwd
           lit -v test/
