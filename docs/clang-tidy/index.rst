@@ -57,35 +57,7 @@ There are currently the following groups of checks:
 ====================== =========================================================
 Name prefix            Description
 ====================== =========================================================
-``abseil-``            Checks related to Abseil library.
-``altera-``            Checks related to OpenCL programming for FPGAs.
-``android-``           Checks related to Android.
-``boost-``             Checks related to Boost library.
-``bugprone-``          Checks that target bug-prone code constructs.
-``cert-``              Checks related to CERT Secure Coding Guidelines.
-``clang-analyzer-``    Clang Static Analyzer checks.
-``concurrency-``       Checks related to concurrent programming (including
-                       threads, fibers, coroutines, etc.).
-``cppcoreguidelines-`` Checks related to C++ Core Guidelines.
-``darwin-``            Checks related to Darwin coding conventions.
-``fuchsia-``           Checks related to Fuchsia coding conventions.
-``google-``            Checks related to Google coding conventions.
-``hicpp-``             Checks related to High Integrity C++ Coding Standard.
-``linuxkernel-``       Checks related to the Linux Kernel coding conventions.
-``llvm-``              Checks related to the LLVM coding conventions.
-``llvmlibc-``          Checks related to the LLVM-libc coding standards.
-``misc-``              Checks that we didn't have a better category for.
-``modernize-``         Checks that advocate usage of modern (currently "modern"
-                       means "C++11") language constructs.
-``mpi-``               Checks related to MPI (Message Passing Interface).
-``objc-``              Checks related to Objective-C coding conventions.
-``openmp-``            Checks related to OpenMP API.
-``performance-``       Checks that target performance-related issues.
-``portability-``       Checks that target portability-related issues that don't
-                       relate to any particular coding style.
-``readability-``       Checks that target readability-related issues that don't
-                       relate to any particular coding style.
-``zircon-``            Checks related to Zircon kernel coding conventions.
+``autosar-``           Checks related to Autosar C++14 Coding Guidelines.
 ====================== =========================================================
 
 Clang diagnostics are treated in a similar way as check diagnostics. Clang
