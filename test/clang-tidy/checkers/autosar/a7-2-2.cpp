@@ -105,3 +105,5 @@ enum class E11
 // CHECK-MESSAGES: :[[@LINE-6]]:15: warning: enumerator 'E11' base type shall be explicitly defined [autosar-a7-2-2]
 // CHECK-MESSAGES: :[[@LINE-7]]:15: warning: set base type [autosar-a7-2-2]
 // CHECK-FIXES: enum class E11: std::int32_t
+
+enum { __value = 0 };
