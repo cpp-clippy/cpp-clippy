@@ -70,6 +70,8 @@ void A722Check::check(const MatchFinder::MatchResult &Result) {
 
   if (MatchedDecl->getIntegerTypeSourceInfo()) return;
 
+  if (!MatchedDecl->getIdentifier()) return;
+
   int EnumNameLength = MatchedDecl->getIdentifier()->getLength();
 
   diag(MatchedDecl->getLocation().getLocWithOffset(EnumNameLength),
