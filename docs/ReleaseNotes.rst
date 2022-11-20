@@ -144,6 +144,11 @@ Improvements to clang-tidy
 New checks
 ^^^^^^^^^^
 
+- New :doc:`autosar-a7-2-2
+  <clang-tidy/checks/autosar/a7-2-2>` check.
+
+  The check detects enum declarations without base type.
+
 - New :doc:`autosar-a7-2-3
   <clang-tidy/checks/autosar/a7-2-3>` check.
 

@@ -1,0 +1,25 @@
+.. title:: clang-tidy - autosar-a7-2-2
+
+autosar-a7-2-2
+==============
+
+This check flags enum declarations without a base type.
+
+This check corresponds to the Autosar C++14 Coding Standard recommendation
+A7-2-2. Enumerations shall be declared as scoped enum classes.
+
+.. code-block:: c++
+
+enum class E1 // Non-compliant
+{
+  E10, 
+  E11, 
+  E12
+};
+
+enum class E2 : uint8_t // Compliant
+{
+  E13, 
+  E14, 
+  E15
+};

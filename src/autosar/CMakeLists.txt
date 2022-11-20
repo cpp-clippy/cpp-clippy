@@ -4,6 +4,7 @@ set(LLVM_LINK_COMPONENTS
   )
 
 add_clang_library(cppClippyAutosarModule
+  A722Check.cpp
   A723Check.cpp
   AutosarTidyModule.cpp
 
