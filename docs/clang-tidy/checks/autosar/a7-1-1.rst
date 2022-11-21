@@ -1,0 +1,19 @@
+.. title:: clang-tidy - autosar-a7-1-1
+
+autosar-a7-1-1
+==============
+
+This check flags all immutable data that is not declared constexpr or const.
+
+This check corresponds to the Autosar C++14 Coding Standard recommendation
+A7-1-1. const or volatile qualifications shall not be casted away.
+
+.. code-block:: c++
+
+#include <stdint.h>
+
+void Fn() {
+  const int16_t x1 = 5;
+  constexpr int16_t x2 = 5;
+  int16_t x3 = 5;  // Non-compliant
+}
