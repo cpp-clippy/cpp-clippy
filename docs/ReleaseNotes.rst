@@ -144,6 +144,31 @@ Improvements to clang-tidy
 New checks
 ^^^^^^^^^^
 
+- New :doc:`autosar-a5-2-1
+  <clang-tidy/checks/autosar/a5-2-1>` check.
+
+  The check detects use of dynamic_cast.
+
+- New :doc:`autosar-a5-2-2
+  <clang-tidy/checks/autosar/a5-2-2>` check.
+
+  The check detects C-style casts.
+
+- New :doc:`autosar-a5-2-3
+  <clang-tidy/checks/autosar/a5-2-3>` check.
+
+  The check detects cast away of const or volatile qualification.
+
+- New :doc:`autosar-a7-1-1
+  <clang-tidy/checks/autosar/a7-1-1>` check.
+
+  The check detects immutable data that is not declared constexpr or const.
+
+- New :doc:`autosar-a7-1-6
+  <clang-tidy/checks/autosar/a7-1-6>` check.
+
+  FIXME: add release notes.
+
 - New :doc:`autosar-a7-2-2
   <clang-tidy/checks/autosar/a7-2-2>` check.
 
@@ -153,6 +178,11 @@ New checks
   <clang-tidy/checks/autosar/a7-2-3>` check.
 
   The check detects non-scoped enum declarations.
+
+- New :doc:`autosar-m7-1-2
+  <clang-tidy/checks/autosar/m7-1-2>` check.
+
+  FIXME: add release notes.
 
 - New :doc:`bugprone-shared-ptr-array-mismatch <clang-tidy/checks/bugprone/shared-ptr-array-mismatch>` check.
 

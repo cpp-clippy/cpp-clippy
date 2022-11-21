@@ -1,0 +1,38 @@
+.. title:: clang-tidy - autosar-a5-2-3
+
+autosar-a5-2-3
+==============
+
+This check flags all cast aways of const or volatile qualifications.
+
+This check corresponds to the Autosar C++14 Coding Standard recommendation
+A5-2-3. const or volatile qualifications shall not be casted away.
+
+.. code-block:: c++
+
+#include <stdint.h>
+
+void F1(const char* str) noexcept(false) {
+  *(const_cast<char*>(str)) = '\0'; // Non-compliant - const qualification removed
+}
+
+class C {
+ public:
+  explicit C(int32_t) {}
+};
+
+void F2() noexcept(false) {
+  C const a1 = C(10);
+  C* a2 = const_cast<C*>(&a1); // Non-compliant - const qualification removed
+  C* a3 = (C*)&a1;             // Non-compliant - const qualification removed
+}
+
+extern volatile int32_t* F3() noexcept;
+
+void F4() noexcept {
+  volatile int32_t* ptr1 = F3();
+
+  int32_t* ptr2 = const_cast<int32_t*>(ptr1); // Non-compliant - const qualification removed
+
+  int32_t* ptr3 = (int32_t*)ptr1; // Non-compliant - const qualification removed
+}

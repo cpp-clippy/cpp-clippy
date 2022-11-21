@@ -9,8 +9,14 @@
 #include "../ClangTidy.h"
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
+#include "A521Check.h"
+#include "A522Check.h"
+#include "A523Check.h"
+#include "A711Check.h"
+#include "A716Check.h"
 #include "A722Check.h"
 #include "A723Check.h"
+#include "M712Check.h"
 
 using namespace clang::ast_matchers;
 
@@ -21,10 +27,22 @@ namespace autosar {
 class AutosarModule : public ClangTidyModule {
 public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
+    CheckFactories.registerCheck<A521Check>(
+        "autosar-a5-2-1");
+    CheckFactories.registerCheck<A522Check>(
+        "autosar-a5-2-2");
+    CheckFactories.registerCheck<A523Check>(
+        "autosar-a5-2-3");
+    CheckFactories.registerCheck<A711Check>(
+        "autosar-a7-1-1");
+    CheckFactories.registerCheck<A716Check>(
+        "autosar-a7-1-6");
     CheckFactories.registerCheck<A722Check>(
         "autosar-a7-2-2");
     CheckFactories.registerCheck<A723Check>(
         "autosar-a7-2-3");
+    CheckFactories.registerCheck<M712Check>(
+        "autosar-m7-1-2");
   }
 };
 
