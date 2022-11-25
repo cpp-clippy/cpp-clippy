@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Cpp Clippy](../)
+* [Cpp Clippy](broken-reference)
 
 ## Rules
 
@@ -11,4 +11,4 @@
 
 ## Annexes
 
-* [Annex A. Traceability to Autosar](rules/annex-a.-traceability-to-autosar.md)
+* [Annex A. Traceability to Autosar](annex-a.-traceability-to-autosar.md)
