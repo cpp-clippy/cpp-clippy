@@ -1,4 +1,4 @@
-// RUN: %check_clang_tidy %s autosar-a7-2-3 %t
+// RUN: %check_cpp_clippy %s autosar-a7-2-3 %t
 
 #include <stdint.h>
 

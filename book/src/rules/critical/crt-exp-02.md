@@ -2,9 +2,10 @@
 description: Do not use dynamic_cast
 ---
 
-# Rule CRT-EXP-02
+# Rule critical-crt-exp-02
 
 * **Classification:** _Advisory_
+* **Offers Fixes:** _No_
 
 ## What it does?
 
@@ -38,5 +39,5 @@ int main()
 
 ### See also
 
-* JSF December 2005: AV Rule 178
-* Autosar March 2019: A5-2-1
+* JSF December 2005: AV Rule 178 Down casting (casting from base to derived class) shall only be allowed through one of the following mechanism: Virtual functions that act like dynamic casts (most likely useful in relatively simple cases); Use of the visitor (or similar) pattern (most likely useful in complicated cases).
+* Autosar March 2019: A5-2-1 dynamic_cast should not be used.

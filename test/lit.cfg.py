@@ -36,11 +36,11 @@ if config.clang_tidy_staticanalyzer:
     config.available_features.add('static-analyzer')
 
 python_exec = shlex.quote(config.python_executable)
-check_clang_tidy = os.path.join(
-    config.test_source_root, "clang-tidy", "check_clang_tidy.py")
+check_cpp_clippy = os.path.join(
+    config.test_source_root, "check_cpp_clippy.py")
 config.substitutions.append(
-    ('%check_clang_tidy',
-     '%s %s' % (python_exec, check_clang_tidy)) )
+    ('%check_cpp_clippy',
+     '%s %s' % (python_exec, check_cpp_clippy)) )
 clang_tidy_diff = os.path.join(
     config.test_source_root, "..", "clang-tidy", "tool", "clang-tidy-diff.py")
 config.substitutions.append(

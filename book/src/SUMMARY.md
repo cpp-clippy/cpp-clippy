@@ -5,8 +5,8 @@
 ## Rules
 
 * [Critical](rules/critical/README.md)
-  * [Rule CRT-EXP-01](rules/critical/rule-crt-exp-01.md)
-  * [Rule CRT-EXP-02](rules/critical/rule-crt-exp-02.md)
+  * [Rule CRT-EXP-01](rules/critical/crt-exp-01.md)
+  * [Rule CRT-EXP-02](rules/critical/crt-exp-02.md)
 
 ## Annexes
 

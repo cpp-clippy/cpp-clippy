@@ -2,9 +2,10 @@
 description: Do not use C-style casts
 ---
 
-# Rule CRT-EXP-01
+# Rule critical-crt-exp-01
 
 * **Classification:** _Required_
+* **Offers Fixes:** _No_
 
 ## What it does?
 
@@ -43,6 +44,8 @@ void Func() {
 
 ### See also
 
-* Autosar March 2019: A5-2-2
-* JSF December 2005: AV Rule 185
+* Autosar March 2019: A5-2-2 Traditional C-style casts shall not be used.
+* MISRA C++ 2008: 5-2-4 C-style casts (other than void casts) and functional notation casts (other than explicit constructor calls) shall not be used.
+* JSF December 2005: AV Rule 185 C++ style casts (const_cast, reinterpret_cast, and static_cast) shall be used instead of the
+traditional C-style casts.
 * [C++ Core Guidelines - Pro Type: C-Style Cast](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-cstylecast.)

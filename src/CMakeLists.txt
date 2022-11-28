@@ -51,9 +51,11 @@ endif()
 # Checks.
 # If you add a check, also add it to ClangTidyForceLinker.h in this directory.
 add_subdirectory(autosar)
+add_subdirectory(critical)
 
 set(ALL_CLANG_TIDY_CHECKS
   cppClippyAutosarModule
+  cppClippyCriticalModule
   )
 if(CLANG_TIDY_ENABLE_STATIC_ANALYZER)
   list(APPEND ALL_CLANG_TIDY_CHECKS cppClippyMPIModule)

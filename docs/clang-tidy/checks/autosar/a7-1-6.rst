@@ -1,6 +1,0 @@
-.. title:: clang-tidy - autosar-a7-1-6
-
-autosar-a7-1-6
-==============
-
-FIXME: Describe what patterns does the check detect and why. Give examples.
