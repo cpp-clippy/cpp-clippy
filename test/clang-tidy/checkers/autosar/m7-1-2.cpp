@@ -1,4 +1,4 @@
-// RUN: %check_clang_tidy %s autosar-m7-1-2 %t
+// RUN: %check_cpp_clippy %s autosar-m7-1-2 %t
 
 // Some external function where first argument is nonconst and second is const.
 char *strcpy1(char *dest, const char *src);

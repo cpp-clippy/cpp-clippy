@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-#===- check_clang_tidy.py - ClangTidy Test Helper ------------*- python -*--===#
+#===- check_cpp_clippy.py - ClangTidy Test Helper ------------*- python -*--===#
 #
 # Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 # See https://llvm.org/LICENSE.txt for license information.
@@ -15,7 +15,7 @@ ClangTidy Test Helper
 This script runs clang-tidy in fix mode and verify fixes, messages or both.
 
 Usage:
-  check_clang_tidy.py [-resource-dir=<resource-dir>] \
+  check_cpp_clippy.py [-resource-dir=<resource-dir>] \
     [-assume-filename=<file-with-source-extension>] \
     [-check-suffix=<comma-separated-file-check-suffixes>] \
     [-check-suffixes=<comma-separated-file-check-suffixes>] \
@@ -24,11 +24,11 @@ Usage:
     -- [optional clang-tidy arguments]
 
 Example:
-  // RUN: %check_clang_tidy %s llvm-include-order %t -- -- -isystem %S/Inputs
+  // RUN: %check_cpp_clippy %s llvm-include-order %t -- -- -isystem %S/Inputs
 
 Notes:
   -std=c++(98|11|14|17|20)-or-later:
-    This flag will cause multiple runs within the same check_clang_tidy
+    This flag will cause multiple runs within the same check_cpp_clippy
     execution. Make sure you don't have shared state across these runs.
 """
 

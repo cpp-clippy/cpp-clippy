@@ -1,11 +1,13 @@
-//===--- A521Check.cpp - cpp-clippy ---------------------------------------===//
+//===--- CrtExp02Check.cpp - cpp-clippy -----------------------------------===//
 //
 // Part of the Cpp-Clippy Project, under the Apache License v2.0.
+// See https://github.com/cpp-clippy/cpp-clippy/LICENSE.txt for
+// license information.
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
 
-#include "A521Check.h"
+#include "CrtExp02Check.h"
 #include "clang/AST/ASTContext.h"
 #include "clang/ASTMatchers/ASTMatchFinder.h"
 
@@ -13,18 +15,18 @@ using namespace clang::ast_matchers;
 
 namespace clang {
 namespace tidy {
-namespace autosar {
+namespace critical {
 
-void A521Check::registerMatchers(MatchFinder *Finder) {
+void CrtExp02Check::registerMatchers(MatchFinder *Finder) {
   Finder->addMatcher(cxxDynamicCastExpr().bind("cast"), this);
 }
 
-void A521Check::check(const MatchFinder::MatchResult &Result) {
+void CrtExp02Check::check(const MatchFinder::MatchResult &Result) {
   const auto *MatchedCast =
       Result.Nodes.getNodeAs<CXXDynamicCastExpr>("cast");
   diag(MatchedCast->getOperatorLoc(), "do not use dynamic_cast");
 }
 
-} // namespace autosar
+} // namespace critical
 } // namespace tidy
 } // namespace clang

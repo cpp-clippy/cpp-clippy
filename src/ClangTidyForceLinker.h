@@ -20,6 +20,11 @@ extern volatile int AutosarModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED AutosarModuleAnchorDestination =
     AutosarModuleAnchorSource;
 
+// This anchor is used to force the linker to link the CriticalModule.
+extern volatile int CriticalModuleAnchorSource;
+static int LLVM_ATTRIBUTE_UNUSED CriticalModuleAnchorDestination =
+    CriticalModuleAnchorSource;
+
 } // namespace tidy
 } // namespace clang
 
