@@ -12,6 +12,7 @@
 #include "../ClangTidyModuleRegistry.h"
 #include "CrtExp01Check.h"
 #include "CrtExp02Check.h"
+#include "CrtExp03Check.h"
 
 using namespace clang::ast_matchers;
 
@@ -25,6 +26,8 @@ class CriticalModule : public ClangTidyModule {
     CheckFactories.registerCheck<CrtExp01Check>("critical-crt-exp-01");
     CheckFactories.registerCheck<CrtExp02Check>(
         "critical-crt-exp-02");
+    CheckFactories.registerCheck<CrtExp03Check>(
+        "critical-crt-exp-03");
   }
 };
 

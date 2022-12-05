@@ -16,10 +16,10 @@ namespace clang {
 namespace tidy {
 namespace critical {
 
-/// FIXME: Write a short description.
+/// Flags all occurrences of dynamic cast.
 ///
 /// For the user-facing documentation see:
-/// https://cpp-clippy.gitbook.io/book/rules/critical/crt-exp-02
+/// https://cpp-clippy.gitbook.io/cpp-clippy/rules/critical/crt-exp-02
 class CrtExp02Check : public ClangTidyCheck {
 public:
   CrtExp02Check(StringRef Name, ClangTidyContext *Context)
