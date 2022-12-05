@@ -14,6 +14,10 @@ Table of contents:
 *   [Contributing](#contributing)
 *   [License](#license)
 
+## Usage
+
+## Configuration
+
 ## Contributing
 
 If you want to contribute to Clippy, you can find more information in [CONTRIBUTING.md](https://github.com/cpp-clippy/cpp-clippy/blob/master/CONTRIBUTING.md).
