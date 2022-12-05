@@ -16,6 +16,27 @@ Table of contents:
 
 ## Usage
 
+Below are instructions on how to use Cpp Clippy as a terminal command.
+
+### Step 1: Install Cpp Clippy
+
+```terminal
+$ git clone https://github.com/cpp-clippy/cpp-clippy.git
+$ cd cpp-clippy
+$ mkdir build
+$ cd build
+$ cmake ..
+$ cmake --build .
+```
+
+### Step 2: Run Cpp Clippy
+
+Each check has a name and the checks to run can be chosen using the -checks= option, which specifies a comma-separated list of positive and negative (prefixed with -) globs. Positive globs add subsets of checks, and negative globs remove them. For example,
+
+```terminal
+$ cpp-clippy test.cpp -checks=-*,critical-*
+```
+
 ## Configuration
 
 ## Contributing
