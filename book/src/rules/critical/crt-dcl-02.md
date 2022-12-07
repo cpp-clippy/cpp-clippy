@@ -1,26 +1,28 @@
 ---
-description: FIXME
+description: Type wchar_t shall not be used
 ---
 
-# Rule critical-crt-dcl-02
+# Rule CRT-DCL-02
 
-* **Classification:** FIXME [_Required_ / _Advisory_]
-* **Offers Fixes:** FIXME [_Yes_ / _No_]
+* **Classification:** _Required_
+* **Offers Fixes:** _No_
 
 ## What it does?
 
-FIXME
+Detects all uses of wchar\_t type
 
 ## Why is this bad?
 
-FIXME
+Width of wchar\_t type is implementation-defined. Use types char16\_t and char32\_t instead.
 
 ## Example
 
 ```cpp
-FIXME
+char16_t string_1[] = u"AAA"; // Compliant
+char32_t string_2[] = U"BBB"; // Compliant 
+wchar_t  string_3[] = L"CCC"; // Non-compliant
 ```
 
 ### See also
 
-FIXME   
+* Autosar March 2019: Rule A2-13-3 Type wchar\_t shall not be used.
