@@ -1,26 +1,29 @@
 ---
-description: FIXME
+description: Literal suffixes shall be upper case
 ---
 
-# Rule critical-crt-dcl-01
+# Rule CRT-DCL-01
 
-* **Classification:** FIXME [_Required_ / _Advisory_]
-* **Offers Fixes:** FIXME [_Yes_ / _No_]
+* **Classification:** _Required_
+* **Offers Fixes:** _Yes_
 
 ## What it does?
 
-FIXME
+Detects when the integral literal or floating point (decimal or hexadecimal) literal has a non-uppercase suffix and provides a fix-it hint with the uppercase suffix.
 
 ## Why is this bad?
 
-FIXME
+Using lower case literal suffixes creates potential ambiguity between "1" (digit 1) and "l" (letter el) for declaring literals.
 
 ## Example
 
 ```cpp
-FIXME
+auto x = 1;  // OK, no suffix.
+auto x = 1u; // warning: integer literal suffix 'u' is not upper-case 
+auto x = 1U; // OK, suffix is uppercase.
 ```
 
 ### See also
 
-FIXME   
+* Autosar March 2019: M2-13-4 Literal suffixes shall be upper case.
+* SEI CERT C++ Coding Standard: DCL16-CPP. Use "L," not "l," to indicate a long value
