@@ -4,8 +4,8 @@ description: Don't cast away const or volatile
 
 # Rule CRT-EXP-04
 
-* **Classification:** FIXME \[_Required_ / _Advisory_]
-* **Offers Fixes:** FIXME \[_Yes_ / _No_]
+* **Classification:** _Required_
+* **Offers Fixes:** _No_
 
 ## What it does?
 
