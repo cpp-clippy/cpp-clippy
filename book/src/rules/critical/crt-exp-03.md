@@ -1,7 +1,7 @@
 ---
 description: >-
-  The value returned by a function having a non-void return type that is not an
-  overloaded operator shall be used.
+  Use the value returned by a function having a non-void return type that is not
+  an overloaded operator
 ---
 
 # Rule CRT-EXP-03
