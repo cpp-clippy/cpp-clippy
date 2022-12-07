@@ -11,6 +11,7 @@ description: Traceability to Autosar C++14 Release 19-03
 | A2-13-3 (required) Type wchar\_t shall not be used.                                                                                |   Identical   |  CRT-DCL-01  | -       |
 | A5-2-1 (advisory) dynamic\_cast should not be used.                                                                                |   Identical   |  CRT-EXP-02  | -       |
 | A5-2-2 (required) Traditional C-style casts shall not be used.                                                                     |   Identical   |  CRT-EXP-01  | -       |
+| A7-1-1 (required) Constexpr or const specifiers shall be used for immutable data declaration.                                      |   Identical   |  CRT-EXP-05  | -       |
 | A7-1-6 (required) The typedef specifier shall not be used.                                                                         |   Identical   |  CRT-EXP-06  | -       |
 | A7-2-2 (required) Enumeration underlying base type shall be explicitly defined.                                                    |   Identical   |  CRT-EXP-07  | -       |
 | A7-2-3 (required) Enumerations shall be declared as scoped enum classes.                                                           |   Identical   |  CRT-EXP-08  | -       |
