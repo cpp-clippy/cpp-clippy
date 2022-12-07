@@ -13,3 +13,4 @@ description: Traceability to Autosar C++14 Release 19-03
 | A5-2-2 (required) Traditional C-style casts shall not be used.                                                                     |   Identical   |  CRT-EXP-01  | -       |
 | A7-1-6 (required) The typedef specifier shall not be used.                                                                         |   Identical   |  CRT-EXP-06  | -       |
 | A7-2-2 (required) Enumeration underlying base type shall be explicitly defined.                                                    |   Identical   |  CRT-EXP-07  | -       |
+| A7-2-3 (required) Enumerations shall be declared as scoped enum classes.                                                           |   Identical   |  CRT-EXP-08  | -       |
