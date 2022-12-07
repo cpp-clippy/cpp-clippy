@@ -1,8 +1,16 @@
 add_clang_library(cppClippyCriticalModule
   CriticalClippyModule.cpp
+  CrtDcl01Check.cpp
+  CrtDcl02Check.cpp
   CrtExp01Check.cpp
   CrtExp02Check.cpp
   CrtExp03Check.cpp
+  CrtExp04Check.cpp
+  CrtExp05Check.cpp
+  CrtExp06Check.cpp
+  CrtExp07Check.cpp
+  CrtExp08Check.cpp
+  CrtExp09Check.cpp
   )
 
 clang_target_link_libraries(cppClippyCriticalModule
